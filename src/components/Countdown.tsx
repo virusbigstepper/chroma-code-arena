@@ -40,7 +40,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   };
 
   return (
-    <div className="flex items-center space-x-1 text-white font-mono">
+    <div className="flex items-center space-x-1 text-white font-mono font-bold">
       {formatNumber(timeLeft.hours)}:{formatNumber(timeLeft.minutes)}:{formatNumber(timeLeft.seconds)}
     </div>
   );

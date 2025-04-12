@@ -74,6 +74,12 @@
 
   body {
     @apply bg-icpc-black text-white;
+    font-family: 'IBM Plex Mono', monospace;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -102,4 +108,58 @@
 
 .countdown-value {
   @apply text-lg text-white font-mono;
+}
+
+@keyframes text-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text-gradient {
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #F2C94C,
+    #ffffff,
+    #F2C94C
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  color: transparent;
+  animation: text-gradient 8s ease infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
