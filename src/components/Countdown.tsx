@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface CountdownProps {
@@ -39,9 +38,27 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     return num < 10 ? `0${num}` : num.toString();
   };
 
+  const TimeUnit = ({ value, label }: { value: string, label: string }) => (
+    <div className="flex flex-col items-center mx-2">
+      <div className="bg-black/70 rounded-lg px-4 py-2 text-3xl font-mono font-bold min-w-[80px] text-center">
+        {value}
+      </div>
+      <div className="text-sm mt-1 text-gray-400">{label}</div>
+    </div>
+  );
+
   return (
-    <div className="flex items-center space-x-1 text-white font-mono font-bold">
-      {formatNumber(timeLeft.hours)}:{formatNumber(timeLeft.minutes)}:{formatNumber(timeLeft.seconds)}
+    <div className="flex flex-col items-center">
+      <h3 className="text-2xl font-bold mb-4 text-pink-500">TIME LEFT</h3>
+      <div className="flex items-center">
+        <TimeUnit value={formatNumber(timeLeft.days)} label="Days" />
+        <div className="text-2xl font-bold mx-1 mb-8">:</div>
+        <TimeUnit value={formatNumber(timeLeft.hours)} label="Hours" />
+        <div className="text-2xl font-bold mx-1 mb-8">:</div>
+        <TimeUnit value={formatNumber(timeLeft.minutes)} label="Minutes" />
+        <div className="text-2xl font-bold mx-1 mb-8">:</div>
+        <TimeUnit value={formatNumber(timeLeft.seconds)} label="Seconds" />
+      </div>
     </div>
   );
 };
