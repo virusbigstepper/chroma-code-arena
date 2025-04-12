@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Instagram, Twitter, Linkedin, MessageSquare, Mail, MapPin, Phone } from 'lucide-react';
+import LOGO from '../assets/logo.png';
 
 const Footer = () => {
   return (
@@ -9,8 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <div className="font-bold text-2xl text-white mb-4">
-              <span className="font-mono border border-white px-1.5 py-0.5">HASH</span>
-              <span className="ml-1 font-mono">DEFINE</span>
+              <img src={LOGO} alt="Logo" className="w-30 h-10" />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               An ICPC-inspired competitive programming event designed to challenge your algorithmic thinking and team collaboration skills.
