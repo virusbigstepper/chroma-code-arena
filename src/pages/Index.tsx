@@ -19,7 +19,7 @@ const Index = () => {
       <NavBar />
       <main className="flex-grow">
         <Hero />
-        <About />
+        {/* <About /> */}
         <Schedule />
         <Prizes />
         <Faq />

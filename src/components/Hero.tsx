@@ -1,5 +1,6 @@
 import React from 'react';
 import { BackgroundBeams } from "@/components/ui/background-beams";
+
 import { Button } from "@/components/ui/button";
 import Countdown from './Countdown';
 import { ChevronDown, Code, Users, Trophy, Calendar, Clock } from 'lucide-react';
@@ -12,7 +13,7 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative py-8">
       {/* Background animated elements */}
-      <BackgroundBeams className="opacity-40" />
+      <BackgroundBeams className="opacity-" />
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div className="absolute top-10 left-10 w-20 h-20 bg-icpc-blue/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-icpc-yellow/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -33,7 +34,7 @@ const Hero = () => {
             </p>
             <div className="flex justify-center">
               <Button 
-                className="rounded-full px-8 py-6 text-white font-bold relative overflow-hidden group"
+                className="rounded-full px-12 py-8 text-white text-xl font-bold relative overflow-hidden group hover:scale-105 transition-transform duration-200"
                 style={{
                   background: 'linear-gradient(45deg, #F8C949, #B42926, #328CC8)',
                   backgroundSize: '200% 200%',
@@ -49,6 +50,27 @@ const Hero = () => {
                 Register Now
               </Button>
             </div>
+          </div>
+
+          {/* Countdown and Date Cards */}
+          <div className="md:col-span-2 bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
+            <div className="flex items-center gap-4 mb-4">
+              <Clock className="text-icpc-yellow" size={32} />
+              <h3 className="text-xl font-bold">Event Countdown</h3>
+            </div>
+            <div className="flex items-center justify-center">
+              <span className="text-white font-mono bg-black/70 px-4 py-2 rounded">
+                <Countdown targetDate={targetDate} />
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
+            <div className="flex items-center gap-4 mb-4">
+              <Calendar className="text-icpc-blue" size={32} />
+              <h3 className="text-xl font-bold">Event Date</h3>
+            </div>
+            <p className="text-gray-400">Coming Soon</p>
           </div>
 
           {/* Feature Cards */}
@@ -74,29 +96,6 @@ const Hero = () => {
               <h3 className="text-xl font-bold">Compete to Win</h3>
             </div>
             <p className="text-gray-400">Test your skills against other teams for prizes and recognition.</p>
-          </div>
-
-          {/* Countdown Card */}
-          <div className="md:col-span-2 bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
-            <div className="flex items-center gap-4 mb-4">
-              <Clock className="text-icpc-yellow" size={32} />
-              <h3 className="text-xl font-bold">Event Countdown</h3>
-            </div>
-            <div className="flex items-center justify-center space-x-4">
-              <span className="text-icpc-yellow font-mono">Starts in:</span>
-              <span className="text-white font-mono bg-black/70 px-4 py-2 rounded">
-                <Countdown targetDate={targetDate} />
-              </span>
-            </div>
-          </div>
-
-          {/* Date Card */}
-          <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
-            <div className="flex items-center gap-4 mb-4">
-              <Calendar className="text-icpc-blue" size={32} />
-              <h3 className="text-xl font-bold">Event Date</h3>
-            </div>
-            <p className="text-gray-400">Coming Soon</p>
           </div>
         </div>
       </div>
