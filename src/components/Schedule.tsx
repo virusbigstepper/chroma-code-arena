@@ -32,7 +32,7 @@ const Schedule = () => {
   return (
     <section id="schedule" className="py-20 relative bg-black/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl pl-8 relative vertical-accent mb-10">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
             EVENT <span className="text-icpc-red">SCHEDULE</span>
           </h2>

@@ -11,7 +11,7 @@ const Hero = () => {
   targetDate.setDate(targetDate.getDate() + 30);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative py-8">
+    <section id="home" className="min-h-screen flex items-center justify-center relative py-8 mt-16">
       {/* Background animated elements */}
       <BackgroundBeams className="opacity-" />
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
@@ -52,7 +52,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Countdown and Date Cards */}
+          {/* Countdown and Participants Cards */}
           <div className="md:col-span-2 bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
             <div className="flex items-center gap-4 mb-4">
               <Clock className="text-icpc-yellow" size={32} />
@@ -67,10 +67,14 @@ const Hero = () => {
 
           <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
             <div className="flex items-center gap-4 mb-4">
-              <Calendar className="text-icpc-blue" size={32} />
-              <h3 className="text-xl font-bold">Event Date</h3>
+              <Users className="text-icpc-blue" size={32} />
+              <h3 className="text-xl font-bold">Registered Teams</h3>
             </div>
-            <p className="text-gray-400">Coming Soon</p>
+            <div className="flex items-center justify-center">
+              <span className="text-white font-mono text-3xl font-bold">42</span>
+              <span className="text-gray-400 ml-2">teams</span>
+            </div>
+            <p className="text-gray-400 text-sm mt-2 text-center">Join the competition!</p>
           </div>
 
           {/* Feature Cards */}
