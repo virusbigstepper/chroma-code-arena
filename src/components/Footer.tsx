@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram, Twitter, Linkedin, MessageSquare, Mail, MapPin, Phone } from 'lucide-react';
 import LOGO from '../assets/logo.png';
@@ -27,7 +26,6 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <FooterLink href="#home">Home</FooterLink>
-              <FooterLink href="#about">About</FooterLink>
               <FooterLink href="#schedule">Schedule</FooterLink>
               <FooterLink href="#prizes">Prizes</FooterLink>
               <FooterLink href="#faq">FAQ</FooterLink>

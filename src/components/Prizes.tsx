@@ -13,7 +13,7 @@ const Prizes = () => {
   return (
     <section ref={sectionRef} id="prizes" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl pl-8 relative vertical-accent mb-10">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
             EVENT <span className="text-icpc-blue">PRIZES</span>
           </h2>
@@ -69,23 +69,25 @@ const Prizes = () => {
           </motion.div>
         </div>
         
-        <div className="mt-16 max-w-4xl mx-auto bg-black/20 backdrop-blur-sm border border-gray-800 rounded-lg p-6">
-          <h3 className="text-xl font-bold mb-4 flex items-center">
-            <Gift className="mr-2 text-icpc-yellow" />
-            Special Awards
-          </h3>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <SpecialAward title="Most Elegant Solution" description="For the team with the most elegant and efficient approach to solving problems" />
-            <SpecialAward title="Best Newcomers" description="For the best performing team participating for the first time" />
-            <SpecialAward title="Most Problems Solved" description="For the team that solves the highest number of problems" />
-            <SpecialAward title="Fastest Solution" description="For the team with the fastest correct solution to a specific challenge" />
-          </ul>
+        {/* Special Awards Section */}
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold mb-8 text-center">Special Awards</h3>
+          <div className="grid grid-cols-1 gap-6 max-w-lg mx-auto">
+            <div className="bg-black/40 backdrop-blur-sm rounded-lg p-6 border border-gray-800">
+              <div className="flex items-center gap-4 mb-4">
+                <Gift className="text-icpc-yellow" size={32} />
+                <h3 className="text-xl font-bold">Best Fresher Team Award</h3>
+              </div>
+              <p className="text-gray-400">Special recognition and prizes for the highest-scoring team composed entirely of first-year students.</p>
+              <div className="mt-4 text-lg font-semibold text-icpc-yellow">₹15,000</div>
+            </div>
+          </div>
         </div>
       </div>
       
       {/* Add some decorative elements */}
-      <div className="absolute top-20 right-10 w-32 h-32 bg-icpc-yellow/5 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 left-10 w-24 h-24 bg-icpc-blue/5 rounded-full blur-xl"></div>
+      <div className="absolute top-20 right-10 w-32 h-32 bg-icpc-blue/5 rounded-full blur-xl"></div>
+      <div className="absolute bottom-20 left-10 w-24 h-24 bg-icpc-red/5 rounded-full blur-xl"></div>
     </section>
   );
 };
